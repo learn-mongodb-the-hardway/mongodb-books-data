@@ -69,7 +69,7 @@ function executeTransaction(from, to, amount) {
   );
 
   if (result.modifiedCount == 0) {
-    cancel();
+    cancel(transactionId);
     throw Error("Failed to move transaction " + transactionId + " to pending");
   }
 
